@@ -1,0 +1,274 @@
+[
+  {
+    "id": "rectangular-callout",
+    "name": "Rectangular Callout",
+    "category": "callouts",
+    "description": "Rectangle with callout line",
+    "tags": ["callout", "rectangle", "comment"],
+    "preview": "callouts/rectangular-callout.png",
+    "pptxDefinition": {
+      "type": "wedgeRectCallout",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "4472C4" },
+      "line": { "color": "2E5AAA", "width": 1 }
+    }
+  },
+  {
+    "id": "rounded-rectangular-callout",
+    "name": "Rounded Rectangular Callout",
+    "category": "callouts",
+    "description": "Rounded rectangle with callout",
+    "tags": ["callout", "rounded", "comment"],
+    "preview": "callouts/rounded-rectangular-callout.png",
+    "pptxDefinition": {
+      "type": "wedgeRoundRectCallout",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "70AD47" },
+      "line": { "color": "507E32", "width": 1 }
+    }
+  },
+  {
+    "id": "oval-callout",
+    "name": "Oval Callout",
+    "category": "callouts",
+    "description": "Oval with callout line",
+    "tags": ["callout", "oval", "ellipse", "comment"],
+    "preview": "callouts/oval-callout.png",
+    "pptxDefinition": {
+      "type": "wedgeEllipseCallout",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "FFC000" },
+      "line": { "color": "C08900", "width": 1 }
+    }
+  },
+  {
+    "id": "cloud-callout",
+    "name": "Cloud Callout",
+    "category": "callouts",
+    "description": "Cloud-shaped callout",
+    "tags": ["callout", "cloud", "thought", "comment"],
+    "preview": "callouts/cloud-callout.png",
+    "pptxDefinition": {
+      "type": "cloudCallout",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "E7E6E6" },
+      "line": { "color": "7F7F7F", "width": 1 }
+    }
+  },
+  {
+    "id": "line-callout-1",
+    "name": "Line Callout 1",
+    "category": "callouts",
+    "description": "Rectangle with line (no border)",
+    "tags": ["callout", "line", "simple"],
+    "preview": "callouts/line-callout-1.png",
+    "pptxDefinition": {
+      "type": "borderCallout1",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "5B9BD5" },
+      "line": { "color": "41719C", "width": 1 }
+    }
+  },
+  {
+    "id": "line-callout-2",
+    "name": "Line Callout 2",
+    "category": "callouts",
+    "description": "Rectangle with angled line (no border)",
+    "tags": ["callout", "line", "angled"],
+    "preview": "callouts/line-callout-2.png",
+    "pptxDefinition": {
+      "type": "borderCallout2",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "A5A5A5" },
+      "line": { "color": "6D6D6D", "width": 1 }
+    }
+  },
+  {
+    "id": "line-callout-3",
+    "name": "Line Callout 3",
+    "category": "callouts",
+    "description": "Rectangle with double line (no border)",
+    "tags": ["callout", "line", "double"],
+    "preview": "callouts/line-callout-3.png",
+    "pptxDefinition": {
+      "type": "borderCallout3",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "44546A" },
+      "line": { "color": "2E3641", "width": 1 }
+    }
+  },
+  {
+    "id": "accent-callout-1",
+    "name": "Accent Callout 1",
+    "category": "callouts",
+    "description": "Rectangle with accent line",
+    "tags": ["callout", "accent", "line"],
+    "preview": "callouts/accent-callout-1.png",
+    "pptxDefinition": {
+      "type": "accentCallout1",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "9DC3E6" },
+      "line": { "color": "5B9BD5", "width": 1 }
+    }
+  },
+  {
+    "id": "accent-callout-2",
+    "name": "Accent Callout 2",
+    "category": "callouts",
+    "description": "Rectangle with angled accent line",
+    "tags": ["callout", "accent", "angled"],
+    "preview": "callouts/accent-callout-2.png",
+    "pptxDefinition": {
+      "type": "accentCallout2",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "B4C7E7" },
+      "line": { "color": "8EAADB", "width": 1 }
+    }
+  },
+  {
+    "id": "accent-callout-3",
+    "name": "Accent Callout 3",
+    "category": "callouts",
+    "description": "Rectangle with double accent line",
+    "tags": ["callout", "accent", "double"],
+    "preview": "callouts/accent-callout-3.png",
+    "pptxDefinition": {
+      "type": "accentCallout3",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "FFD966" },
+      "line": { "color": "E6A814", "width": 1 }
+    }
+  },
+  {
+    "id": "simple-callout-1",
+    "name": "Simple Callout 1",
+    "category": "callouts",
+    "description": "Simple rectangle with pointer",
+    "tags": ["callout", "simple", "basic"],
+    "preview": "callouts/simple-callout-1.png",
+    "pptxDefinition": {
+      "type": "callout1",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "ED7D31" },
+      "line": { "color": "A85623", "width": 1 }
+    }
+  },
+  {
+    "id": "simple-callout-2",
+    "name": "Simple Callout 2",
+    "category": "callouts",
+    "description": "Simple rectangle with angled pointer",
+    "tags": ["callout", "simple", "angled"],
+    "preview": "callouts/simple-callout-2.png",
+    "pptxDefinition": {
+      "type": "callout2",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "C00000" },
+      "line": { "color": "8B0000", "width": 1 }
+    }
+  },
+  {
+    "id": "simple-callout-3",
+    "name": "Simple Callout 3",
+    "category": "callouts",
+    "description": "Simple rectangle with double pointer",
+    "tags": ["callout", "simple", "double"],
+    "preview": "callouts/simple-callout-3.png",
+    "pptxDefinition": {
+      "type": "callout3",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "92D050" },
+      "line": { "color": "70AD47", "width": 1 }
+    }
+  },
+  {
+    "id": "accent-border-callout-1",
+    "name": "Accent Border Callout 1",
+    "category": "callouts",
+    "description": "Bordered rectangle with accent line",
+    "tags": ["callout", "border", "accent"],
+    "preview": "callouts/accent-border-callout-1.png",
+    "pptxDefinition": {
+      "type": "accentBorderCallout1",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "FF6B9D" },
+      "line": { "color": "C71585", "width": 1 }
+    }
+  },
+  {
+    "id": "accent-border-callout-2",
+    "name": "Accent Border Callout 2",
+    "category": "callouts",
+    "description": "Bordered rectangle with angled accent line",
+    "tags": ["callout", "border", "accent", "angled"],
+    "preview": "callouts/accent-border-callout-2.png",
+    "pptxDefinition": {
+      "type": "accentBorderCallout2",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "BDD7EE" },
+      "line": { "color": "8EAADB", "width": 1 }
+    }
+  },
+  {
+    "id": "accent-border-callout-3",
+    "name": "Accent Border Callout 3",
+    "category": "callouts",
+    "description": "Bordered rectangle with double accent line",
+    "tags": ["callout", "border", "accent", "double"],
+    "preview": "callouts/accent-border-callout-3.png",
+    "pptxDefinition": {
+      "type": "accentBorderCallout3",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "C5E0B4" },
+      "line": { "color": "A9D08E", "width": 1 }
+    }
+  }
+]

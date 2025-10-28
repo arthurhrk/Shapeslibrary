@@ -1,0 +1,46 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+
+# Raycast
+.raycast/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Temp files
+*.tmp
+temp/
+tmp_shape.tsx
+test-*.js
+old_block.txt
+
+# Documentation (auto-generated)
+*_GUIDE.md
+DEBUG_*.md
+TROUBLESHOOTING_*.md
+FIX_*.md
+V2_*.md
+STATUS.md
+TODO.md
+CAPTURE_*.md
+PREVIEW_*.md
+GETTING_STARTED.md

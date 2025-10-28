@@ -1,0 +1,240 @@
+[
+  {
+    "id": "rectangle",
+    "name": "Rectangle",
+    "category": "basic",
+    "description": "Simple rectangle shape",
+    "tags": ["square", "box", "basic"],
+    "preview": "basic/rectangle.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 2,
+      "y": 2.5,
+      "w": 6,
+      "h": 3,
+      "fill": { "color": "4472C4" },
+      "line": { "color": "2E5AAA", "width": 1 }
+    }
+  },
+  {
+    "id": "rounded-rectangle",
+    "name": "Rounded Rectangle",
+    "category": "basic",
+    "description": "Rectangle with rounded corners",
+    "tags": ["rounded", "box", "basic"],
+    "preview": "basic/rounded-rectangle.png",
+    "pptxDefinition": {
+      "type": "roundRectangle",
+      "x": 2,
+      "y": 2.5,
+      "w": 6,
+      "h": 3,
+      "fill": { "color": "70AD47" },
+      "line": { "color": "507E32", "width": 1 }
+    }
+  },
+  {
+    "id": "circle",
+    "name": "Circle",
+    "category": "basic",
+    "description": "Perfect circle shape",
+    "tags": ["ellipse", "round", "basic"],
+    "preview": "basic/circle.png",
+    "pptxDefinition": {
+      "type": "ellipse",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "FFC000" },
+      "line": { "color": "C08900", "width": 1 }
+    }
+  },
+  {
+    "id": "ellipse",
+    "name": "Ellipse",
+    "category": "basic",
+    "description": "Oval shape",
+    "tags": ["oval", "circle", "basic"],
+    "preview": "basic/ellipse.png",
+    "pptxDefinition": {
+      "type": "ellipse",
+      "x": 2,
+      "y": 2.5,
+      "w": 6,
+      "h": 3,
+      "fill": { "color": "E7E6E6" },
+      "line": { "color": "7F7F7F", "width": 1 }
+    }
+  },
+  {
+    "id": "triangle",
+    "name": "Triangle",
+    "category": "basic",
+    "description": "Equilateral triangle",
+    "tags": ["arrow", "point", "basic"],
+    "preview": "basic/triangle.png",
+    "pptxDefinition": {
+      "type": "triangle",
+      "x": 3,
+      "y": 2,
+      "w": 4,
+      "h": 4.5,
+      "fill": { "color": "5B9BD5" },
+      "line": { "color": "41719C", "width": 1 }
+    }
+  },
+  {
+    "id": "diamond",
+    "name": "Diamond",
+    "category": "basic",
+    "description": "Diamond shape",
+    "tags": ["rhombus", "square", "rotated"],
+    "preview": "basic/diamond.png",
+    "pptxDefinition": {
+      "type": "diamond",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "ED7D31" },
+      "line": { "color": "A85623", "width": 1 }
+    }
+  },
+  {
+    "id": "pentagon",
+    "name": "Pentagon",
+    "category": "basic",
+    "description": "Five-sided polygon",
+    "tags": ["polygon", "geometric"],
+    "preview": "basic/pentagon.png",
+    "pptxDefinition": {
+      "type": "pentagon",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "A5A5A5" },
+      "line": { "color": "6D6D6D", "width": 1 }
+    }
+  },
+  {
+    "id": "hexagon",
+    "name": "Hexagon",
+    "category": "basic",
+    "description": "Six-sided polygon",
+    "tags": ["polygon", "geometric"],
+    "preview": "basic/hexagon.png",
+    "pptxDefinition": {
+      "type": "hexagon",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "44546A" },
+      "line": { "color": "2E3641", "width": 1 }
+    }
+  },
+  {
+    "id": "octagon",
+    "name": "Octagon",
+    "category": "basic",
+    "description": "Eight-sided polygon",
+    "tags": ["polygon", "geometric", "stop"],
+    "preview": "basic/octagon.png",
+    "pptxDefinition": {
+      "type": "octagon",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "C00000" },
+      "line": { "color": "8B0000", "width": 1 }
+    }
+  },
+  {
+    "id": "star",
+    "name": "Star",
+    "category": "basic",
+    "description": "Five-pointed star",
+    "tags": ["favorite", "rating"],
+    "preview": "basic/star.png",
+    "pptxDefinition": {
+      "type": "star",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "FFD966" },
+      "line": { "color": "E6A814", "width": 1 }
+    }
+  },
+  {
+    "id": "parallelogram",
+    "name": "Parallelogram",
+    "category": "basic",
+    "description": "Slanted rectangle",
+    "tags": ["slant", "skew"],
+    "preview": "basic/parallelogram.png",
+    "pptxDefinition": {
+      "type": "parallelogram",
+      "x": 2,
+      "y": 2.5,
+      "w": 6,
+      "h": 3,
+      "fill": { "color": "9DC3E6" },
+      "line": { "color": "5B9BD5", "width": 1 }
+    }
+  },
+  {
+    "id": "trapezoid",
+    "name": "Trapezoid",
+    "category": "basic",
+    "description": "Trapezoid shape",
+    "tags": ["trapezium"],
+    "preview": "basic/trapezoid.png",
+    "pptxDefinition": {
+      "type": "trapezoid",
+      "x": 2,
+      "y": 2.5,
+      "w": 6,
+      "h": 3,
+      "fill": { "color": "B4C7E7" },
+      "line": { "color": "8EAADB", "width": 1 }
+    }
+  },
+  {
+    "id": "heart",
+    "name": "Heart",
+    "category": "basic",
+    "description": "Heart shape",
+    "tags": ["love", "favorite"],
+    "preview": "basic/heart.png",
+    "pptxDefinition": {
+      "type": "heart",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "FF6B9D" },
+      "line": { "color": "C71585", "width": 1 }
+    }
+  },
+  {
+    "id": "plus",
+    "name": "Plus",
+    "category": "basic",
+    "description": "Plus sign",
+    "tags": ["add", "cross", "positive"],
+    "preview": "basic/plus.png",
+    "pptxDefinition": {
+      "type": "plus",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "70AD47" },
+      "line": { "color": "507E32", "width": 1 }
+    }
+  }
+]

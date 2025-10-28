@@ -1,0 +1,274 @@
+[
+  {
+    "id": "arrow-right",
+    "name": "Right Arrow",
+    "category": "arrows",
+    "description": "Arrow pointing right",
+    "tags": ["right", "direction", "next"],
+    "preview": "arrows/arrow-right.png",
+    "pptxDefinition": {
+      "type": "rightArrow",
+      "x": 2,
+      "y": 3,
+      "w": 6,
+      "h": 2.5,
+      "fill": { "color": "4472C4" },
+      "line": { "color": "2E5AAA", "width": 1 }
+    }
+  },
+  {
+    "id": "arrow-left",
+    "name": "Left Arrow",
+    "category": "arrows",
+    "description": "Arrow pointing left",
+    "tags": ["left", "direction", "back", "previous"],
+    "preview": "arrows/arrow-left.png",
+    "pptxDefinition": {
+      "type": "leftArrow",
+      "x": 2,
+      "y": 3,
+      "w": 6,
+      "h": 2.5,
+      "fill": { "color": "70AD47" },
+      "line": { "color": "507E32", "width": 1 }
+    }
+  },
+  {
+    "id": "arrow-up",
+    "name": "Up Arrow",
+    "category": "arrows",
+    "description": "Arrow pointing up",
+    "tags": ["up", "direction", "increase"],
+    "preview": "arrows/arrow-up.png",
+    "pptxDefinition": {
+      "type": "upArrow",
+      "x": 3.5,
+      "y": 2,
+      "w": 2.5,
+      "h": 5,
+      "fill": { "color": "FFC000" },
+      "line": { "color": "C08900", "width": 1 }
+    }
+  },
+  {
+    "id": "arrow-down",
+    "name": "Down Arrow",
+    "category": "arrows",
+    "description": "Arrow pointing down",
+    "tags": ["down", "direction", "decrease"],
+    "preview": "arrows/arrow-down.png",
+    "pptxDefinition": {
+      "type": "downArrow",
+      "x": 3.5,
+      "y": 2,
+      "w": 2.5,
+      "h": 5,
+      "fill": { "color": "ED7D31" },
+      "line": { "color": "A85623", "width": 1 }
+    }
+  },
+  {
+    "id": "arrow-left-right",
+    "name": "Left-Right Arrow",
+    "category": "arrows",
+    "description": "Double-headed horizontal arrow",
+    "tags": ["bidirectional", "horizontal", "both"],
+    "preview": "arrows/arrow-left-right.png",
+    "pptxDefinition": {
+      "type": "leftRightArrow",
+      "x": 2,
+      "y": 3,
+      "w": 6,
+      "h": 2.5,
+      "fill": { "color": "5B9BD5" },
+      "line": { "color": "41719C", "width": 1 }
+    }
+  },
+  {
+    "id": "arrow-up-down",
+    "name": "Up-Down Arrow",
+    "category": "arrows",
+    "description": "Double-headed vertical arrow",
+    "tags": ["bidirectional", "vertical", "both"],
+    "preview": "arrows/arrow-up-down.png",
+    "pptxDefinition": {
+      "type": "upDownArrow",
+      "x": 3.5,
+      "y": 2,
+      "w": 2.5,
+      "h": 5,
+      "fill": { "color": "A5A5A5" },
+      "line": { "color": "6D6D6D", "width": 1 }
+    }
+  },
+  {
+    "id": "quad-arrow",
+    "name": "Quad Arrow",
+    "category": "arrows",
+    "description": "Four-way directional arrow",
+    "tags": ["four-way", "cross", "all directions"],
+    "preview": "arrows/quad-arrow.png",
+    "pptxDefinition": {
+      "type": "quadArrow",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "44546A" },
+      "line": { "color": "2E3641", "width": 1 }
+    }
+  },
+  {
+    "id": "bent-arrow",
+    "name": "Bent Arrow",
+    "category": "arrows",
+    "description": "L-shaped bent arrow",
+    "tags": ["bent", "corner", "turn"],
+    "preview": "arrows/bent-arrow.png",
+    "pptxDefinition": {
+      "type": "bentArrow",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 4,
+      "fill": { "color": "9DC3E6" },
+      "line": { "color": "5B9BD5", "width": 1 }
+    }
+  },
+  {
+    "id": "uturn-arrow",
+    "name": "U-Turn Arrow",
+    "category": "arrows",
+    "description": "U-shaped turn arrow",
+    "tags": ["uturn", "return", "back"],
+    "preview": "arrows/uturn-arrow.png",
+    "pptxDefinition": {
+      "type": "uturnArrow",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "B4C7E7" },
+      "line": { "color": "8EAADB", "width": 1 }
+    }
+  },
+  {
+    "id": "circular-arrow",
+    "name": "Circular Arrow",
+    "category": "arrows",
+    "description": "Circular refresh arrow",
+    "tags": ["circular", "refresh", "reload", "cycle"],
+    "preview": "arrows/circular-arrow.png",
+    "pptxDefinition": {
+      "type": "circularArrow",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "70AD47" },
+      "line": { "color": "507E32", "width": 1 }
+    }
+  },
+  {
+    "id": "notched-right-arrow",
+    "name": "Notched Right Arrow",
+    "category": "arrows",
+    "description": "Right arrow with notched tail",
+    "tags": ["right", "notched", "special"],
+    "preview": "arrows/notched-right-arrow.png",
+    "pptxDefinition": {
+      "type": "notchedRightArrow",
+      "x": 2,
+      "y": 3,
+      "w": 6,
+      "h": 2.5,
+      "fill": { "color": "FFD966" },
+      "line": { "color": "E6A814", "width": 1 }
+    }
+  },
+  {
+    "id": "chevron",
+    "name": "Chevron",
+    "category": "arrows",
+    "description": "Chevron arrow shape",
+    "tags": ["chevron", "point", "arrow"],
+    "preview": "arrows/chevron.png",
+    "pptxDefinition": {
+      "type": "chevron",
+      "x": 2,
+      "y": 3,
+      "w": 6,
+      "h": 2.5,
+      "fill": { "color": "E7E6E6" },
+      "line": { "color": "7F7F7F", "width": 1 }
+    }
+  },
+  {
+    "id": "right-arrow-callout",
+    "name": "Right Arrow Callout",
+    "category": "arrows",
+    "description": "Right arrow with callout box",
+    "tags": ["right", "callout", "label"],
+    "preview": "arrows/right-arrow-callout.png",
+    "pptxDefinition": {
+      "type": "rightArrowCallout",
+      "x": 2,
+      "y": 3,
+      "w": 6,
+      "h": 2.5,
+      "fill": { "color": "4472C4" },
+      "line": { "color": "2E5AAA", "width": 1 }
+    }
+  },
+  {
+    "id": "left-arrow-callout",
+    "name": "Left Arrow Callout",
+    "category": "arrows",
+    "description": "Left arrow with callout box",
+    "tags": ["left", "callout", "label"],
+    "preview": "arrows/left-arrow-callout.png",
+    "pptxDefinition": {
+      "type": "leftArrowCallout",
+      "x": 2,
+      "y": 3,
+      "w": 6,
+      "h": 2.5,
+      "fill": { "color": "70AD47" },
+      "line": { "color": "507E32", "width": 1 }
+    }
+  },
+  {
+    "id": "up-arrow-callout",
+    "name": "Up Arrow Callout",
+    "category": "arrows",
+    "description": "Up arrow with callout box",
+    "tags": ["up", "callout", "label"],
+    "preview": "arrows/up-arrow-callout.png",
+    "pptxDefinition": {
+      "type": "upArrowCallout",
+      "x": 3.5,
+      "y": 2,
+      "w": 2.5,
+      "h": 5,
+      "fill": { "color": "FFC000" },
+      "line": { "color": "C08900", "width": 1 }
+    }
+  },
+  {
+    "id": "down-arrow-callout",
+    "name": "Down Arrow Callout",
+    "category": "arrows",
+    "description": "Down arrow with callout box",
+    "tags": ["down", "callout", "label"],
+    "preview": "arrows/down-arrow-callout.png",
+    "pptxDefinition": {
+      "type": "downArrowCallout",
+      "x": 3.5,
+      "y": 2,
+      "w": 2.5,
+      "h": 5,
+      "fill": { "color": "ED7D31" },
+      "line": { "color": "A85623", "width": 1 }
+    }
+  }
+]

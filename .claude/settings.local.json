@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/**)",
+      "Bash(git clone:*)",
+      "Bash(if exist dist rmdir /s /q dist)",
+      "Bash(if exist node_modules rmdir /s /q node_modules)",
+      "Bash(powershell -Command \"if (Test-Path dist) { Remove-Item -Recurse -Force dist }\")",
+      "Bash(tree:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run fix-lint:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"c:\\Users\\arthur.andrade\\OneDrive - Accenture\\Documents\\GitHub\\Shapeslibrary\\scripts\\batch-generate-previews.ps1\")",
+      "Bash(npm run dev:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(cat:*)",
+      "Bash(npm install:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

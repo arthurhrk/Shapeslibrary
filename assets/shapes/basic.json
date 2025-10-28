@@ -1,0 +1,342 @@
+[
+  {
+    "id": "captured-00-acn-mhb3qlre",
+    "name": "00_ACN",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Picture) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "acn"
+    ],
+    "preview": "basic/captured-00-acn-mhb3qlre.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 4.139,
+      "y": 3.008,
+      "w": 5.042,
+      "h": 1.584,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761688315246.pptx",
+    "nativeOnly": true,
+    "__tempPng": "C:\\Users\\ARTHUR~1.AND\\AppData\\Local\\Temp\\raycast-cap-bd263bc8-b316-4491-94a7-d4c92bcffb54.png"
+  },
+  {
+    "id": "captured-00-column-mhb3ro8i",
+    "name": "00_Column",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Group) (Type: -2)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "column"
+    ],
+    "preview": "basic/captured-00-column-mhb3ro8i.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 4.948,
+      "y": 2.234,
+      "w": 5.901,
+      "h": 3.486,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761688365461.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-00-comment-mhb3smng",
+    "name": "00_comment",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Group) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "comment"
+    ],
+    "preview": "basic/captured-00-comment-mhb3smng.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 10.332,
+      "y": 1,
+      "w": 3.001,
+      "h": 0.64,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761688407480.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-00-confidenc-mhb3yc33",
+    "name": "00_confidenc",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Group) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "confidenc"
+    ],
+    "preview": "basic/captured-00-confidenc-mhb3yc33.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 0.772,
+      "y": 0.905,
+      "w": 12.316,
+      "h": 6.14,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761688673898.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-00-four-steps-2-mhb3d5a8",
+    "name": "00_four_steps_2",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Group) (Type: -2)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "four",
+      "steps"
+    ],
+    "preview": "basic/captured-00-four-steps-2-mhb3d5a8.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 2.203,
+      "y": 1.729,
+      "w": 9.11,
+      "h": 3.478,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761687684387.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-00-four-steps-mhb3v0vv",
+    "name": "00_four-steps",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Group) (Type: -2)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "four",
+      "steps"
+    ],
+    "preview": "basic/captured-00-four-steps-mhb3v0vv.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 0.875,
+      "y": 1.795,
+      "w": 11.584,
+      "h": 4.468,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761688520258.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-00-marcador-mhb3ot2c",
+    "name": "00_marcador",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Picture) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "marcador"
+    ],
+    "preview": "basic/placeholder.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 5.167,
+      "y": 1.069,
+      "w": 0.911,
+      "h": 0.383,
+      "rotate": 180,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761688231394.pptx",
+    "nativeOnly": true,
+    "__tempPng": "C:\\Users\\ARTHUR~1.AND\\AppData\\Local\\Temp\\raycast-cap-b0818f9b-289d-42be-b155-1ed558e274f0.png"
+  },
+  {
+    "id": "captured-01-funil2-mhb5b6r1",
+    "name": "01_funil2",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Group) (Type: -2)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "funil2"
+    ],
+    "preview": "basic/captured-01-funil2-mhb5b6r1.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 0.467,
+      "y": 1.778,
+      "w": 12.632,
+      "h": 5.104,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761690955549.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-3d-item-mhb5l05e",
+    "name": "3D-Item",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Group) (Type: -2)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "item"
+    ],
+    "preview": "basic/captured-3d-item-mhb5l05e.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 6.491,
+      "y": 2.473,
+      "w": 3.852,
+      "h": 3.852,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761691412874.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-00-column1-mhb1vp85",
+    "name": "contexto",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "column1"
+    ],
+    "preview": "basic/captured-00-column1-mhb1vp85.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 4.954,
+      "y": 1.544,
+      "w": 2.669,
+      "h": 3.83,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761685188108.pptx"
+  },
+  {
+    "id": "captured-daily-plan-mhb3wwk1",
+    "name": "daily-plan",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Type: -2)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "daily",
+      "plan"
+    ],
+    "preview": "basic/captured-daily-plan-mhb3wwk1.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 1.125,
+      "y": 1.164,
+      "w": 11.693,
+      "h": 5.687,
+      "adj": [],
+      "fill": {
+        "color": "000000",
+        "transparency": -2147483648
+      },
+      "line": {
+        "color": "000000",
+        "width": 1
+      }
+    },
+    "nativePptx": "native/shape_captured_1761688609108.pptx"
+  },
+  {
+    "id": "captured-pasted-image-pdf-mhb1oqyt",
+    "name": "iceberg",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Type: 1)",
+    "tags": [
+      "image"
+    ],
+    "preview": "basic/captured-pasted-image-pdf-mhb1oqyt.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 5.888,
+      "y": 1.32,
+      "w": 2.251,
+      "h": 3.586,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761684860687.pptx",
+    "__tempPng": "C:\\Users\\ARTHUR~1.AND\\AppData\\Local\\Temp\\raycast-cap-3085cec8-f4e6-48c0-9250-239f98f1dc84.png"
+  },
+  {
+    "id": "captured-quotes-mhb5dfip",
+    "name": "QUOTEs",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Group) (Type: -2)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "quotes"
+    ],
+    "preview": "basic/captured-quotes-mhb5dfip.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 5.43,
+      "y": 4.249,
+      "w": 2.515,
+      "h": 1.1,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761691059013.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-boog-1030-mhb2lbtz",
+    "name": "seta-style",
+    "category": "basic",
+    "description": "Captured from PowerPoint (Type: 25)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "boog",
+      "1030"
+    ],
+    "preview": "basic/placeholder.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 9.494,
+      "y": 1.571,
+      "w": 0.366,
+      "h": 0.541,
+      "rotate": 331.61,
+      "adj": [
+        -114.015,
+        -74.434
+      ],
+      "line": {
+        "color": "000000",
+        "width": 1,
+        "transparency": 0
+      }
+    },
+    "nativePptx": "native/shape_captured_1761686384300.pptx"
+  }
+]

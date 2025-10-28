@@ -1,0 +1,274 @@
+[
+  {
+    "id": "flowchart-process",
+    "name": "Process",
+    "category": "flowchart",
+    "description": "Standard process rectangle",
+    "tags": ["process", "action", "step"],
+    "preview": "flowchart/process.png",
+    "pptxDefinition": {
+      "type": "flowChartProcess",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "4472C4" },
+      "line": { "color": "2E5AAA", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-decision",
+    "name": "Decision",
+    "category": "flowchart",
+    "description": "Decision diamond",
+    "tags": ["decision", "choice", "branch", "if"],
+    "preview": "flowchart/decision.png",
+    "pptxDefinition": {
+      "type": "flowChartDecision",
+      "x": 3,
+      "y": 2.5,
+      "w": 4,
+      "h": 4,
+      "fill": { "color": "70AD47" },
+      "line": { "color": "507E32", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-input-output",
+    "name": "Input/Output",
+    "category": "flowchart",
+    "description": "Data input or output",
+    "tags": ["io", "data", "input", "output"],
+    "preview": "flowchart/input-output.png",
+    "pptxDefinition": {
+      "type": "flowChartInputOutput",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "FFC000" },
+      "line": { "color": "C08900", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-terminator",
+    "name": "Terminator",
+    "category": "flowchart",
+    "description": "Start or end point",
+    "tags": ["start", "end", "terminator", "stop"],
+    "preview": "flowchart/terminator.png",
+    "pptxDefinition": {
+      "type": "flowChartTerminator",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "ED7D31" },
+      "line": { "color": "A85623", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-predefined-process",
+    "name": "Predefined Process",
+    "category": "flowchart",
+    "description": "Subroutine or function",
+    "tags": ["subroutine", "function", "module"],
+    "preview": "flowchart/predefined-process.png",
+    "pptxDefinition": {
+      "type": "flowChartPredefinedProcess",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "5B9BD5" },
+      "line": { "color": "41719C", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-document",
+    "name": "Document",
+    "category": "flowchart",
+    "description": "Document or report",
+    "tags": ["document", "report", "file"],
+    "preview": "flowchart/document.png",
+    "pptxDefinition": {
+      "type": "flowChartDocument",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "E7E6E6" },
+      "line": { "color": "7F7F7F", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-connector",
+    "name": "Connector",
+    "category": "flowchart",
+    "description": "Connection point",
+    "tags": ["connector", "junction", "link"],
+    "preview": "flowchart/connector.png",
+    "pptxDefinition": {
+      "type": "flowChartConnector",
+      "x": 4,
+      "y": 3,
+      "w": 2,
+      "h": 2.5,
+      "fill": { "color": "A5A5A5" },
+      "line": { "color": "6D6D6D", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-preparation",
+    "name": "Preparation",
+    "category": "flowchart",
+    "description": "Preparation or initialization",
+    "tags": ["preparation", "setup", "initialize"],
+    "preview": "flowchart/preparation.png",
+    "pptxDefinition": {
+      "type": "flowChartPreparation",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "44546A" },
+      "line": { "color": "2E3641", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-manual-input",
+    "name": "Manual Input",
+    "category": "flowchart",
+    "description": "Manual data entry",
+    "tags": ["manual", "input", "keyboard"],
+    "preview": "flowchart/manual-input.png",
+    "pptxDefinition": {
+      "type": "flowChartManualInput",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "9DC3E6" },
+      "line": { "color": "5B9BD5", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-manual-operation",
+    "name": "Manual Operation",
+    "category": "flowchart",
+    "description": "Manual processing step",
+    "tags": ["manual", "operation", "processing"],
+    "preview": "flowchart/manual-operation.png",
+    "pptxDefinition": {
+      "type": "flowChartManualOperation",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "B4C7E7" },
+      "line": { "color": "8EAADB", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-alternate-process",
+    "name": "Alternate Process",
+    "category": "flowchart",
+    "description": "Alternative processing step",
+    "tags": ["alternate", "alternative", "process"],
+    "preview": "flowchart/alternate-process.png",
+    "pptxDefinition": {
+      "type": "flowChartAlternateProcess",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "FFD966" },
+      "line": { "color": "E6A814", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-internal-storage",
+    "name": "Internal Storage",
+    "category": "flowchart",
+    "description": "Internal storage location",
+    "tags": ["storage", "memory", "cache"],
+    "preview": "flowchart/internal-storage.png",
+    "pptxDefinition": {
+      "type": "flowChartInternalStorage",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "C00000" },
+      "line": { "color": "8B0000", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-multidocument",
+    "name": "Multiple Documents",
+    "category": "flowchart",
+    "description": "Multiple documents",
+    "tags": ["documents", "files", "multiple"],
+    "preview": "flowchart/multidocument.png",
+    "pptxDefinition": {
+      "type": "flowChartMultidocument",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "92D050" },
+      "line": { "color": "70AD47", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-offpage-connector",
+    "name": "Off-Page Connector",
+    "category": "flowchart",
+    "description": "Link to another page",
+    "tags": ["offpage", "connector", "link"],
+    "preview": "flowchart/offpage-connector.png",
+    "pptxDefinition": {
+      "type": "flowChartOffpageConnector",
+      "x": 3.5,
+      "y": 2.5,
+      "w": 3,
+      "h": 3.5,
+      "fill": { "color": "FF6B9D" },
+      "line": { "color": "C71585", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-delay",
+    "name": "Delay",
+    "category": "flowchart",
+    "description": "Delay or wait",
+    "tags": ["delay", "wait", "pause"],
+    "preview": "flowchart/delay.png",
+    "pptxDefinition": {
+      "type": "flowChartDelay",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "BDD7EE" },
+      "line": { "color": "8EAADB", "width": 1 }
+    }
+  },
+  {
+    "id": "flowchart-display",
+    "name": "Display",
+    "category": "flowchart",
+    "description": "Display output",
+    "tags": ["display", "output", "screen"],
+    "preview": "flowchart/display.png",
+    "pptxDefinition": {
+      "type": "flowChartDisplay",
+      "x": 2.5,
+      "y": 2.5,
+      "w": 5,
+      "h": 3,
+      "fill": { "color": "C5E0B4" },
+      "line": { "color": "A9D08E", "width": 1 }
+    }
+  }
+]
