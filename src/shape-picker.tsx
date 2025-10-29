@@ -64,13 +64,17 @@ function EditShapeForm({ shape, onSave }: { shape: ShapeInfo; onSave: () => void
         // Remove from old category
         removeShapeFromLibrary(shape.id, oldCategory);
 
+        // Move the preview file physically from old to new category folder
+        const { movePreviewToCategory } = await import("./utils/shapeSaver");
+        const newPreviewPath = movePreviewToCategory(shape, oldCategory, newCategory);
+
         // Add to new category with updates
         const updatedShape: ShapeInfo = {
           ...shape,
           name: values.name,
           category: newCategory,
           tags: values.tags ? values.tags.split(",").map((t) => t.trim()) : [],
-          preview: `${newCategory}/${shape.id}.png`, // Update preview path
+          preview: newPreviewPath, // Use the actual moved preview path
         };
 
         const { addShapeToLibrary } = await import("./utils/shapeSaver");
@@ -453,6 +457,39 @@ export default function ShapePicker() {
   }
 
   /**
+   * Handle repair broken previews
+   */
+  async function handleRepairPreviews() {
+    const toast = await showToast({
+      style: Toast.Style.Animated,
+      title: "Repairing previews...",
+    });
+
+    try {
+      const { repairOrphanedPreviews } = await import("./utils/shapeSaver");
+      const repairedCount = repairOrphanedPreviews(true); // Force repair
+
+      if (repairedCount > 0) {
+        toast.style = Toast.Style.Success;
+        toast.title = "Previews repaired!";
+        toast.message = `Fixed ${repairedCount} broken preview${repairedCount > 1 ? "s" : ""}`;
+
+        // Refresh to show fixed previews
+        clearCache();
+        await loadShapes(true);
+      } else {
+        toast.style = Toast.Style.Success;
+        toast.title = "All previews OK";
+        toast.message = "No broken previews found";
+      }
+    } catch (error) {
+      toast.style = Toast.Style.Failure;
+      toast.title = "Repair failed";
+      toast.message = error instanceof Error ? error.message : "Unknown error";
+    }
+  }
+
+  /**
    * Handle delete shape
    */
   async function handleDeleteShape(shape: ShapeInfo) {
@@ -663,7 +700,7 @@ try {
           <Grid.Item
             key={shape.id}
             title={shape.name}
-            subtitle={`${getCategoryDisplayName(shape.category).toUpperCase()}${shape.nativeOnly ? " • NATIVE-ONLY" : ""}`}
+            subtitle={`${getCategoryDisplayName(shape.category)}${shape.nativeOnly ? " • Native-Only" : ""}`}
             content={{ source: previewSource }}
             keywords={[shape.name, shape.category, ...(shape.tags || [])]}
             actions={
@@ -707,6 +744,12 @@ try {
                     icon={Icon.ArrowClockwise}
                     shortcut={{ modifiers: ["cmd"], key: "r" }}
                     onAction={handleRefresh}
+                  />
+                  <Action
+                    title="Repair Broken Previews"
+                    icon={Icon.Hammer}
+                    shortcut={{ modifiers: ["cmd", "shift"], key: "r" }}
+                    onAction={handleRepairPreviews}
                   />
                   <Action
                     title="Save Native Now"
