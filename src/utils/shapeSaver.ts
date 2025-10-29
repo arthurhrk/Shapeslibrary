@@ -2,10 +2,10 @@
  * Save captured shapes to JSON files
  */
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
-import { join } from "path";
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, renameSync, copyFileSync } from "fs";
+import { join, basename, dirname } from "path";
 import { environment } from "@raycast/api";
-import { getShapesDir as getShapesDirUtil } from "./paths";
+import { getShapesDir as getShapesDirUtil, getAssetsDir, getLibraryRoot } from "./paths";
 import { ShapeInfo, ShapeCategory } from "../types/shapes";
 
 /**
@@ -157,4 +157,118 @@ export function getShapeCounts(): Record<ShapeCategory, number> {
 export function getTotalShapeCount(): number {
   const counts = getShapeCounts();
   return Object.values(counts).reduce((sum, count) => sum + count, 0);
+}
+
+/**
+ * Move preview file from old category to new category
+ * Returns the new preview path
+ */
+export function movePreviewToCategory(shape: ShapeInfo, oldCategory: ShapeCategory, newCategory: ShapeCategory): string {
+  const assetsDir = getAssetsDir();
+
+  // Build old and new paths
+  const oldPreviewPath = join(assetsDir, `${oldCategory}/${shape.id}.png`);
+  const newCategoryDir = join(assetsDir, newCategory);
+  const newPreviewPath = join(assetsDir, `${newCategory}/${shape.id}.png`);
+
+  // Ensure new category directory exists
+  if (!existsSync(newCategoryDir)) {
+    mkdirSync(newCategoryDir, { recursive: true });
+  }
+
+  // Move the file if it exists
+  if (existsSync(oldPreviewPath)) {
+    try {
+      renameSync(oldPreviewPath, newPreviewPath);
+      console.log(`[ShapeSaver] Moved preview from ${oldPreviewPath} to ${newPreviewPath}`);
+    } catch (error) {
+      // If rename fails (maybe cross-device), try copy + delete
+      try {
+        copyFileSync(oldPreviewPath, newPreviewPath);
+        // Don't delete old file to be safe - user can clean up manually
+        console.log(`[ShapeSaver] Copied preview from ${oldPreviewPath} to ${newPreviewPath}`);
+      } catch (copyError) {
+        console.error(`[ShapeSaver] Failed to move preview:`, copyError);
+      }
+    }
+  }
+
+  return `${newCategory}/${shape.id}.png`;
+}
+
+/**
+ * Auto-repair function: finds orphaned preview PNGs and moves them to correct category folder
+ * based on what's defined in the JSON files.
+ *
+ * @param force - If true, forces repair even if it already ran before
+ */
+export function repairOrphanedPreviews(force = false): number {
+  const assetsDir = getAssetsDir();
+  const categories: ShapeCategory[] = ["basic", "arrows", "flowchart", "callouts"];
+
+  let repairedCount = 0;
+
+  // Check if repair already ran (create a marker file)
+  const repairMarker = join(getLibraryRoot(), ".preview_repair_done");
+  if (!force && existsSync(repairMarker)) {
+    console.log("[ShapeSaver] Preview repair already completed");
+    return 0;
+  }
+
+  console.log("[ShapeSaver] Starting orphaned preview repair...");
+
+  // For each category, check if previews are in correct location
+  for (const category of categories) {
+    const shapes = loadCategoryShapes(category);
+    const categoryDir = join(assetsDir, category);
+
+    // Ensure category directory exists
+    if (!existsSync(categoryDir)) {
+      mkdirSync(categoryDir, { recursive: true });
+    }
+
+    for (const shape of shapes) {
+      const expectedPath = join(assetsDir, shape.preview);
+
+      // If preview doesn't exist at expected location, search for it
+      if (!existsSync(expectedPath)) {
+        console.log(`[ShapeSaver] Preview missing for ${shape.id} at ${expectedPath}`);
+
+        // Search in all category folders
+        for (const searchCategory of categories) {
+          const searchPath = join(assetsDir, `${searchCategory}/${shape.id}.png`);
+
+          if (existsSync(searchPath) && searchCategory !== category) {
+            // Found it in wrong folder! Move it
+            try {
+              renameSync(searchPath, expectedPath);
+              console.log(`[ShapeSaver] ✓ Moved ${shape.id}.png from ${searchCategory}/ to ${category}/`);
+              repairedCount++;
+              break;
+            } catch (error) {
+              // Try copy instead
+              try {
+                copyFileSync(searchPath, expectedPath);
+                console.log(`[ShapeSaver] ✓ Copied ${shape.id}.png from ${searchCategory}/ to ${category}/`);
+                repairedCount++;
+                break;
+              } catch (copyError) {
+                console.error(`[ShapeSaver] Failed to repair ${shape.id}:`, copyError);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Mark repair as done
+  try {
+    writeFileSync(repairMarker, new Date().toISOString(), "utf-8");
+    console.log(`[ShapeSaver] Preview repair completed. Fixed ${repairedCount} previews.`);
+  } catch (error) {
+    console.error("[ShapeSaver] Failed to write repair marker:", error);
+  }
+
+  return repairedCount;
 }

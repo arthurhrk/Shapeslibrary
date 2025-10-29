@@ -26,8 +26,9 @@ Browse and insert editable PowerPoint shapes into your presentations with ease. 
 
 ### Shape Management
 - **Edit Shapes**: Change name, category, and tags
-- **Move Between Categories**: Reorganize your library by changing shape categories
+- **Move Between Categories**: Reorganize your library by changing shape categories (preview files move automatically)
 - **Delete Shapes**: Remove unwanted shapes with confirmation
+- **Repair Broken Previews**: Fix orphaned thumbnails with one click (`Cmd/Ctrl + Shift + R`)
 - **Batch Preview Generation**: Regenerate previews for entire categories (Windows)
 - **Library Import/Export**: Share shape libraries via ZIP files
 
@@ -56,6 +57,7 @@ Browse and insert editable PowerPoint shapes into your presentations with ease. 
 - **Ctrl/Cmd + E**: Edit shape (name, category, tags)
 - **Ctrl/Cmd + X**: Delete shape from library
 - **Ctrl/Cmd + R**: Refresh shape library
+- **Ctrl/Cmd + Shift + R**: Repair broken preview thumbnails
 - **Ctrl/Cmd + I**: Copy preview image to clipboard
 - **Ctrl/Cmd + F**: Show shape file in Explorer/Finder
 
@@ -190,6 +192,25 @@ MIT License
 Arthur Andrade
 
 ## Changelog
+
+For detailed changes, see [CHANGELOG.md](./CHANGELOG.md)
+
+### v1.1.0 - 2025-01-28
+#### Added
+- **Repair Broken Previews** action with `Cmd/Ctrl + Shift + R` shortcut
+  - Automatically finds and fixes orphaned preview thumbnails
+  - Shows count of repaired previews
+- Auto-repair function for misplaced preview files
+
+#### Changed
+- Category names now display in "Capitalize Each Word" format instead of ALL CAPS
+  - More professional and easier to read
+- Preview files are automatically moved when changing shape categories
+
+#### Fixed
+- **Thumbnail Display Bug**: Fixed blue square thumbnails appearing after category changes
+  - Preview PNGs now properly move to new category folder when editing shapes
+  - Prevents broken preview paths
 
 ### v1.0.0
 - Initial release
