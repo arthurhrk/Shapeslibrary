@@ -557,7 +557,7 @@ export default function ShapePicker() {
       if (requireNative && (!srcPptx || !existsSync(srcPptx))) {
         toast.style = Toast.Style.Failure;
         toast.title = "Native PPTX required";
-        toast.message = "Use 'Save Native Now' or recapture with native save enabled.";
+        toast.message = "Recapture this shape to generate a native PPTX file with your template theme.";
         return;
       }
       if (!srcPptx || !existsSync(srcPptx)) {
@@ -626,39 +626,6 @@ try {
         resolve();
       }
     });
-  }
-
-  /** Save a native PPTX into the library and update JSON */
-  async function saveNativeNow(shape: ShapeInfo) {
-    const toast = await showToast({ style: Toast.Style.Animated, title: "Saving native PPTX..." });
-    try {
-      const libRoot = getLibraryRoot();
-      const nativeDir = join(libRoot, "native");
-      if (!existsSync(nativeDir)) {
-        try { mkdirSync(nativeDir, { recursive: true }); } catch {}
-      }
-      const tmp = await generateShapePptx(shape);
-      const targetRel = `native/shape_${shape.id.replace(/[^a-z0-9_-]/gi, "_")}.pptx`;
-      const targetAbs = join(libRoot, targetRel.replace(/^[\\/]+/, ""));
-      try { if (existsSync(targetAbs)) renameSync(targetAbs, targetAbs + ".bak"); } catch {}
-      renameSync(tmp, targetAbs);
-      updateShapeInLibrary(shape.id, shape.category as any, { nativePptx: targetRel });
-
-      // If using deck, also add/update deck slide
-      const prefs = getPreferenceValues<Preferences>();
-      if (prefs.useLibraryDeck) {
-        const slide = await addShapeToDeckFromPptx(targetAbs);
-        updateShapeInLibrary(shape.id, shape.category as any, { deckSlide: slide });
-      }
-      try { await generatePreview(shape); } catch {}
-      toast.style = Toast.Style.Success;
-      toast.title = "Native saved";
-      toast.message = targetAbs;
-    } catch (e) {
-      toast.style = Toast.Style.Failure;
-      toast.title = "Failed to save native";
-      toast.message = e instanceof Error ? e.message : "Unknown error";
-    }
   }
 
   // Load shapes on mount and when category changes
@@ -744,17 +711,6 @@ try {
                     icon={Icon.ArrowClockwise}
                     shortcut={{ modifiers: ["cmd"], key: "r" }}
                     onAction={handleRefresh}
-                  />
-                  <Action
-                    title="Repair Broken Previews"
-                    icon={Icon.Hammer}
-                    shortcut={{ modifiers: ["cmd", "shift"], key: "r" }}
-                    onAction={handleRepairPreviews}
-                  />
-                  <Action
-                    title="Save Native Now"
-                    icon={Icon.SaveDocument}
-                    onAction={() => saveNativeNow(shape)}
                   />
                   <Action
                     title="Edit Shape"

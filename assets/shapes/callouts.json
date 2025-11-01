@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "id": "captured-group-3-mhfhm16c",
+    "name": "Disclaimers",
+    "category": "callouts",
+    "description": "Captured from PowerPoint (Group) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "group"
+    ],
+    "preview": "callouts/captured-group-3-mhfhm16c.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 0.48,
+      "y": 0.575,
+      "w": 6.299,
+      "h": 5.975,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761953476227.pptx",
+    "nativeOnly": true
+  }
+]

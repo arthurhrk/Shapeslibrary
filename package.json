@@ -6,7 +6,7 @@
     "icon":  "icon.png",
     "author": "arthur.andrade",
     "license": "MIT",
-    "version": "1.1.0",
+    "version": "1.2.2",
     "commands": [
         {
             "name": "shape-picker",
@@ -113,6 +113,14 @@
                     "value": "callouts"
                 }
             ]
+        },
+        {
+            "name": "templatePath",
+            "type": "textfield",
+            "required": false,
+            "title": "PowerPoint Template Path (Optional)",
+            "description": "Path to a PPTX template with your company theme. If provided, all captures will use this template's theme, colors, and fonts. Leave empty to use Office default theme.",
+            "placeholder": "C:\\\\Users\\\\User\\\\Documents\\\\CompanyTemplate.pptx"
         }
     ],
     "dependencies": {

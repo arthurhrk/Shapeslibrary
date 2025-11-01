@@ -23,7 +23,9 @@ type ExtensionPreferences = {
   /** Skip native PPTX save at capture - Avoid saving a PPTX during capture (faster, more reliable). Native insert still works and you can save later. */
   "skipNativeSave": boolean,
   /** Default Category - Category to show by default */
-  "defaultCategory": "all" | "basic" | "arrows" | "flowchart" | "callouts"
+  "defaultCategory": "all" | "basic" | "arrows" | "flowchart" | "callouts",
+  /** PowerPoint Template Path (Optional) - Path to a PPTX template with your company theme. If provided, all captures will use this template's theme, colors, and fonts. Leave empty to use Office default theme. */
+  "templatePath"?: string
 }
 
 /** Preferences accessible in all the extension's commands */
