@@ -1,1 +1,208 @@
-[]
+[
+  {
+    "id": "captured-textbox-14-mhfhn330",
+    "name": "Cond. Comercial",
+    "category": "arrows",
+    "description": "Captured from PowerPoint (Group) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "textbox"
+    ],
+    "preview": "arrows/captured-textbox-14-mhfhn330.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 0.417,
+      "y": 2.792,
+      "w": 3.629,
+      "h": 0.315,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761953520697.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-rectangle-5-mhfia3cn",
+    "name": "Contexto & Objetivos",
+    "category": "arrows",
+    "description": "Captured from PowerPoint (Group) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle"
+    ],
+    "preview": "arrows/captured-rectangle-5-mhfia3cn.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 5.442,
+      "y": 1.696,
+      "w": 7.891,
+      "h": 5.236,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761954599804.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-rectangle-44-mhfhhk5i",
+    "name": "Credencial",
+    "category": "arrows",
+    "description": "Captured from PowerPoint (Group) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle"
+    ],
+    "preview": "arrows/captured-rectangle-44-mhfhhk5i.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 8.814,
+      "y": 2.557,
+      "w": 4.103,
+      "h": 4.409,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761953267460.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-rectangle-21-mhfi6q67",
+    "name": "Equipe",
+    "category": "arrows",
+    "description": "Captured from PowerPoint (Group) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle"
+    ],
+    "preview": "arrows/captured-rectangle-21-mhfi6q67.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 5.692,
+      "y": 3.642,
+      "w": 1.22,
+      "h": 0.53,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761954432869.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-table-5-mhfi7ibw",
+    "name": "Governança",
+    "category": "arrows",
+    "description": "Captured from PowerPoint (Group) (Type: -2)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "table"
+    ],
+    "preview": "arrows/captured-table-5-mhfi7ibw.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 0.41,
+      "y": 1.792,
+      "w": 12.513,
+      "h": 4.803,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761954477501.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-freeform-54-mhfinp62",
+    "name": "Jornada",
+    "category": "arrows",
+    "description": "Captured from PowerPoint (Group) (Type: 138)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "freeform"
+    ],
+    "preview": "arrows/captured-freeform-54-mhfinp62.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 12.443,
+      "y": 2.052,
+      "w": 0.368,
+      "h": 3.421,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761955233788.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-textbox-5-mhfi5uiq",
+    "name": "Liderança",
+    "category": "arrows",
+    "description": "Captured from PowerPoint (Group) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "textbox"
+    ],
+    "preview": "arrows/captured-textbox-5-mhfi5uiq.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 5.525,
+      "y": 2.872,
+      "w": 2.283,
+      "h": 1.654,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761954401442.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-title-1-mhfi3s5s",
+    "name": "Objetivos",
+    "category": "arrows",
+    "description": "Captured from PowerPoint (Group) (Type: 1)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "title"
+    ],
+    "preview": "arrows/captured-title-1-mhfi3s5s.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 0.417,
+      "y": 3.284,
+      "w": 2.44,
+      "h": 0.862,
+      "adj": []
+    },
+    "nativePptx": "native/shape_captured_1761954298398.pptx",
+    "nativeOnly": true
+  },
+  {
+    "id": "captured-rounded-rectangle-mhfhl7jj",
+    "name": "Serviços ACN",
+    "category": "arrows",
+    "description": "Captured from PowerPoint (Group) (Type: 5)",
+    "tags": [
+      "captured",
+      "basic",
+      "rectangle",
+      "rounded"
+    ],
+    "preview": "arrows/captured-rounded-rectangle-mhfhl7jj.png",
+    "pptxDefinition": {
+      "type": "rectangle",
+      "x": 0.505,
+      "y": 1.649,
+      "w": 2.875,
+      "h": 3.976,
+      "adj": [
+        0.041
+      ]
+    },
+    "nativePptx": "native/shape_captured_1761953438615.pptx",
+    "nativeOnly": true
+  }
+]
