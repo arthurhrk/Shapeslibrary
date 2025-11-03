@@ -182,6 +182,7 @@ export interface Preferences {
   forceExactShapes?: boolean;
   useLibraryDeck?: boolean;
   defaultCategory: "all" | ShapeCategory;
+  templatePath?: string;
 }
 
 /**

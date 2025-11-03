@@ -3,7 +3,7 @@ import { open, showToast, Toast, getPreferenceValues, environment } from "@rayca
 import { writeFileSync, unlinkSync, existsSync } from "fs";
 import { tmpdir } from "os";
 import { join } from "path";
-import { ShapeInfo, Preferences } from "../types/shapes";
+import { ShapeInfo, Preferences, ShapeFill, ShapeLine } from "../types/shapes";
 import { spawn } from "child_process";
 import { getLibraryRoot } from "../utils/paths";
 
@@ -11,6 +11,43 @@ import { getLibraryRoot } from "../utils/paths";
  * Active temporary files that need cleanup
  */
 const activeTempFiles: Set<string> = new Set();
+
+/**
+ * Normalize color format to ensure it starts with #
+ * This handles both old format (RRGGBB) and new format (#RRGGBB)
+ * and ensures colors are always interpreted as absolute RGB, not theme colors
+ */
+function normalizeColor(color: string | undefined): string | undefined {
+  if (!color) return undefined;
+  // If already has #, return as is
+  if (color.startsWith("#")) return color;
+  // If it's a 6-character hex string, add # prefix
+  if (/^[0-9A-Fa-f]{6}$/.test(color)) return `#${color}`;
+  // Otherwise return as is (might be a named color)
+  return color;
+}
+
+/**
+ * Normalize fill properties to ensure color format is correct
+ */
+function normalizeFill(fill: ShapeFill | undefined): ShapeFill | undefined {
+  if (!fill) return undefined;
+  return {
+    ...fill,
+    color: normalizeColor(fill.color),
+  };
+}
+
+/**
+ * Normalize line properties to ensure color format is correct
+ */
+function normalizeLine(line: ShapeLine | undefined): ShapeLine | undefined {
+  if (!line) return undefined;
+  return {
+    ...line,
+    color: normalizeColor(line.color),
+  };
+}
 
 /**
  * Generate a temporary PowerPoint file with the specified shape
@@ -33,13 +70,15 @@ export async function generateShapePptx(shape: ShapeInfo): Promise<string> {
   // Add the shape based on the definition
   const shapeDef = shape.pptxDefinition;
 
+  // Normalize colors to ensure absolute RGB format with # prefix
+  // This prevents theme color interpretation and ensures consistent colors
   slide.addShape(shapeDef.type as any, {
     x: shapeDef.x,
     y: shapeDef.y,
     w: shapeDef.w,
     h: shapeDef.h,
-    fill: shapeDef.fill,
-    line: shapeDef.line,
+    fill: normalizeFill(shapeDef.fill),
+    line: normalizeLine(shapeDef.line),
     shadow: shapeDef.shadow,
     rotate: shapeDef.rotate,
     flipH: shapeDef.flipH,
@@ -86,7 +125,7 @@ export async function openShapeInPowerPoint(shape: ShapeInfo): Promise<void> {
         srcPptx = join(getLibraryRoot(), shape.nativePptx.replace(/^[\\/]+/, ""));
       } else {
         if (prefs.forceExactShapes || shape.nativeOnly) {
-          throw new Error("Native PPTX required. Use 'Save Native Now' or recapture with native save enabled.");
+          throw new Error("Native PPTX required. Recapture this shape to generate a native PPTX file with your template theme.");
         }
         srcPptx = await generateShapePptx(shape);
         tempPath = srcPptx;

@@ -20,6 +20,7 @@ Browse and insert editable PowerPoint shapes into your presentations with ease. 
 - **Extract from PowerPoint**: Capture any shape from existing presentations
 - **Auto-Detection**: Automatically detects shape type and suggests tags
 - **Preserve Properties**: Maintains colors, sizes, formatting, and all visual properties
+- **100% Theme Fidelity**: Use custom PowerPoint templates to preserve company themes, colors, and fonts
 - **Build Your Library**: Save captured shapes for instant reuse
 - **Automatic PNG Preview**: Generates high-quality preview images on capture
 - **Native PPTX Storage**: Stores original PPTX files for 100% fidelity
@@ -28,7 +29,6 @@ Browse and insert editable PowerPoint shapes into your presentations with ease. 
 - **Edit Shapes**: Change name, category, and tags
 - **Move Between Categories**: Reorganize your library by changing shape categories (preview files move automatically)
 - **Delete Shapes**: Remove unwanted shapes with confirmation
-- **Repair Broken Previews**: Fix orphaned thumbnails with one click (`Cmd/Ctrl + Shift + R`)
 - **Batch Preview Generation**: Regenerate previews for entire categories (Windows)
 - **Library Import/Export**: Share shape libraries via ZIP files
 
@@ -57,7 +57,6 @@ Browse and insert editable PowerPoint shapes into your presentations with ease. 
 - **Ctrl/Cmd + E**: Edit shape (name, category, tags)
 - **Ctrl/Cmd + X**: Delete shape from library
 - **Ctrl/Cmd + R**: Refresh shape library
-- **Ctrl/Cmd + Shift + R**: Repair broken preview thumbnails
 - **Ctrl/Cmd + I**: Copy preview image to clipboard
 - **Ctrl/Cmd + F**: Show shape file in Explorer/Finder
 
@@ -80,6 +79,9 @@ Shapes are stored as JSON definitions compatible with PptxGenJS, ensuring they m
 
 Access preferences through Raycast Settings → Extensions → PowerPoint Shapes Library:
 
+- **PowerPoint Template Path**: **[RECOMMENDED]** Path to a PPTX template with your company theme. This ensures all captured shapes preserve your company's colors, fonts, and branding. Leave empty to use Office default theme.
+  - Example: `C:\Users\YourName\Documents\CompanyTemplate.pptx`
+  - Create a template by saving any PowerPoint with your company theme
 - **Enable Cache**: Cache shape definitions for faster loading (default: enabled)
 - **Auto Cleanup Temp Files**: Delete temporary PowerPoint files after 60 seconds (default: enabled)
 - **Library Folder**: Custom location for storing shapes (leave empty for default app data directory)
@@ -88,6 +90,27 @@ Access preferences through Raycast Settings → Extensions → PowerPoint Shapes
 - **Use PPTX Library Deck**: Store all shapes in a single PPTX deck for faster access (default: enabled)
 - **Skip native PPTX save at capture**: Faster capture by skipping native file save (default: enabled)
 - **Default Category**: Category to show when opening Search Shapes (default: Basic Shapes)
+
+### Using a Custom PowerPoint Template (Recommended for Corporate Use)
+
+To ensure all captured shapes maintain your company's branding (colors, fonts, theme):
+
+1. **Create a Template**:
+   - Open PowerPoint with your company theme/template
+   - Save it to a permanent location (e.g., `C:\Users\YourName\Documents\CompanyTemplate.pptx`)
+
+2. **Configure the Extension**:
+   - Open Raycast → Extensions → PowerPoint Shapes Library → Preferences
+   - Set **PowerPoint Template Path** to your template file path
+   - Example: `C:\Users\YourName\Documents\CompanyTemplate.pptx`
+
+3. **Benefits**:
+   - ✅ **100% Color Fidelity**: Theme colors (Accent 1, Accent 2, etc.) are preserved exactly
+   - ✅ **Font Preservation**: Headers, body text, and all fonts maintain formatting
+   - ✅ **Brand Consistency**: All shapes use your company's visual identity
+   - ✅ **Automatic Application**: Template is used for all captures and library operations
+
+**Without a template**, shapes will use Office's default theme, which may change colors and fonts.
 
 ### Customizing Category Names
 
@@ -194,30 +217,3 @@ Arthur Andrade
 ## Changelog
 
 For detailed changes, see [CHANGELOG.md](./CHANGELOG.md)
-
-### v1.1.0 - 2025-01-28
-#### Added
-- **Repair Broken Previews** action with `Cmd/Ctrl + Shift + R` shortcut
-  - Automatically finds and fixes orphaned preview thumbnails
-  - Shows count of repaired previews
-- Auto-repair function for misplaced preview files
-
-#### Changed
-- Category names now display in "Capitalize Each Word" format instead of ALL CAPS
-  - More professional and easier to read
-- Preview files are automatically moved when changing shape categories
-
-#### Fixed
-- **Thumbnail Display Bug**: Fixed blue square thumbnails appearing after category changes
-  - Preview PNGs now properly move to new category folder when editing shapes
-  - Prevents broken preview paths
-
-### v1.0.0
-- Initial release
-- Visual grid browser with PNG/SVG previews
-- Shape capture from PowerPoint
-- Customizable categories
-- Edit and delete shapes
-- Multiple insert methods
-- Batch preview generation (Windows)
-- TypeScript build fixes and optimizations

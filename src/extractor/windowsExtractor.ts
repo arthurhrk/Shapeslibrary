@@ -14,7 +14,7 @@ import { getNativeDir, getLibraryRoot } from "../utils/paths";
  * Extract selected shape from PowerPoint (reliable spawn approach)
  */
 export async function extractSelectedShapeWindows(): Promise<ExtractionResult> {
-  const prefs = getPreferenceValues<{ skipNativeSave?: boolean }>();
+  const prefs = getPreferenceValues<{ skipNativeSave?: boolean; templatePath?: string }>();
   // Prepare native output path inside Raycast assets
   const supportPath = getLibraryRoot();
   const nativeDir = getNativeDir();
@@ -25,6 +25,8 @@ export async function extractSelectedShapeWindows(): Promise<ExtractionResult> {
   const relNative = `native/shape_captured_${ts}.pptx`;
   const absNative = join(supportPath, "native", `shape_captured_${ts}.pptx`);
   const psDest = absNative.replace(/'/g, "''");
+  const templatePath = prefs.templatePath?.trim() || "";
+  const psTemplatePath = templatePath.replace(/'/g, "''");
   const script = `
 try {
     Write-Host "STEP1: Getting PowerPoint"
@@ -120,11 +122,13 @@ try {
         try {
             if ($shape.Fill.Visible -ne 0) {
                 if ($shape.Fill.ForeColor) {
+                    # Get RGB value - this resolves Theme Colors to absolute RGB in current theme
                     $rgb = $shape.Fill.ForeColor.RGB
                     $r = ($rgb -band 0xFF).ToString("X2")
                     $g = (($rgb -shr 8) -band 0xFF).ToString("X2")
                     $b = (($rgb -shr 16) -band 0xFF).ToString("X2")
-                    $data['fillColor'] = "$r$g$b"
+                    # Add # prefix for proper hex color format (required by pptxgenjs)
+                    $data['fillColor'] = "#$r$g$b"
                 }
                 if ($shape.Fill.Transparency -ne $null) {
                     $data['fillTransparency'] = [math]::Round($shape.Fill.Transparency, 2)
@@ -148,11 +152,13 @@ try {
         try {
         if ($shape.Line.Visible -ne 0) {
                 if ($shape.Line.ForeColor) {
+                    # Get RGB value - this resolves Theme Colors to absolute RGB in current theme
                     $rgb = $shape.Line.ForeColor.RGB
                     $r = ($rgb -band 0xFF).ToString("X2")
                     $g = (($rgb -shr 8) -band 0xFF).ToString("X2")
                     $b = (($rgb -shr 16) -band 0xFF).ToString("X2")
-                    $data['lineColor'] = "$r$g$b"
+                    # Add # prefix for proper hex color format (required by pptxgenjs)
+                    $data['lineColor'] = "#$r$g$b"
                 }
                 if ($shape.Line.Weight -ne $null) {
                     $data['lineWeight'] = [math]::Round($shape.Line.Weight, 2)
@@ -166,36 +172,51 @@ try {
 
     Write-Host "STEP8: Converting to JSON"
     # Duplicate exact shape into a new presentation and save as PPTX (hidden window)
-    $skipNative = ${prefs.skipNativeSave ? '$true' : '$false'}
-    # Always save native for grouped/multi and picture selections (needed for 100% fidelity)
-    if ($isGroupOrMulti -or ($shapeTypeVal -eq 13)) { $skipNative = $false }
-    if ($skipNative) {
-        Write-Host "STEP8e: Native save skipped"
-    } else {
+    # IMPORTANT: ALWAYS save native PPTX to ensure thumbnail colors match original
+    # Without native PPTX, thumbnails will use default Office theme colors
+    # Ignoring skipNativeSave preference for color accuracy
+    $skipNative = $false
+    Write-Host "STEP8a: Saving native PPTX for accurate color preservation"
+    if ($true) {
         try {
             $destPath = '${psDest}'
             $destDir = Split-Path -Parent $destPath
             if (-not (Test-Path $destDir)) { New-Item -ItemType Directory -Force -Path $destDir | Out-Null }
 
-            Write-Host "STEP8a: Creating hidden presentation"
-            $new = $ppt.Presentations.Add(0) # msoFalse -> hidden
+            Write-Host "STEP8a: Creating presentation from template or default"
+            # Use template if provided, otherwise create blank presentation
+            $templatePath = '${psTemplatePath}'
+            if ($templatePath -and (Test-Path $templatePath)) {
+                Write-Host "STEP8a1: Opening template: $templatePath"
+                $new = $ppt.Presentations.Open($templatePath, $true, $false, $false)
+                Write-Host "STEP8a1: Template opened successfully - using company theme!"
+            } else {
+                Write-Host "STEP8a1: No template provided, creating blank presentation with Office default theme"
+                $new = $ppt.Presentations.Add(0)
+            }
+
+            Write-Host "STEP8a2: Adding blank slide"
             $slide = $new.Slides.Add(1, 12) # ppLayoutBlank
+
+            Write-Host "STEP8a3: Pasting selected shape"
             if ($isGroupOrMulti) { $range.Copy() } else { $shape.Copy() }
             $slide.Shapes.Paste() | Out-Null
+            Write-Host "STEP8a3: Shape pasted successfully"
             Write-Host "STEP8b: Saving native PPTX (temp)"
             $tmpNative = Join-Path $env:TEMP ("raycast-native-" + [guid]::NewGuid().ToString() + ".pptx")
             $new.SaveAs($tmpNative, 24) # ppSaveAsOpenXMLPresentation
             try { $new.Saved = $true } catch {}
             $new.Close()
-            Write-Host "STEP8b: Copying native PPTX to target"
+
+            Write-Host "STEP8c: Copying native PPTX to target"
             try {
               Copy-Item -Path $tmpNative -Destination $destPath -Force
             } catch {
-              Write-Host "STEP8e: Copy to target failed: $($_.Exception.Message)" 
+              Write-Host "STEP8e: Copy to target failed: $($_.Exception.Message)"
             }
             try { Remove-Item -Path $tmpNative -ErrorAction SilentlyContinue } catch {}
             $data['nativePptxRelPath'] = '${relNative}'
-            Write-Host "STEP8c: Native PPTX saved"
+            Write-Host "STEP8d: Native PPTX saved (theme from template or default)"
         } catch {
             Write-Host "STEP8e: Native save failed: $($_.Exception.Message)"
         }
